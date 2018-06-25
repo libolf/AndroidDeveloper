@@ -25,14 +25,15 @@
         </activity>
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name=".provider.TestContentProvider"
             android:authorities="com.libok.androiddeveloper"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/xiaomi_update_sdk_file_paths" />
-        </provider>
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".service.TestService"
+            android:enabled="true"
+            android:exported="true"/>
     </application>
 
 </manifest>

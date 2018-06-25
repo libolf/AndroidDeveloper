@@ -3,8 +3,11 @@ package com.libok.androiddeveloper.activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.libok.androiddeveloper.R;
+import com.libok.androiddeveloper.util.L;
+import com.libok.androiddeveloper.util.T;
 import com.xiaomi.market.sdk.UpdateResponse;
 import com.xiaomi.market.sdk.XiaomiUpdateAgent;
 import com.xiaomi.market.sdk.XiaomiUpdateListener;

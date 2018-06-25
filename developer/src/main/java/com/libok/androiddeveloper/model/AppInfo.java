@@ -1,0 +1,71 @@
+package com.libok.androiddeveloper.model;
+
+import android.graphics.drawable.Drawable;
+
+/**
+ * @author liboK
+ * @date 2018/6/25 0025 3:10
+ * @e-mail libolf@outlook.com
+ * @description APP信息类
+ */
+public class AppInfo {
+    private String mAppLabel;
+    private String mAppPackageName;
+    private Drawable mAppIcon;
+    private boolean mAppSelected;
+
+    public AppInfo() {
+    }
+
+    public AppInfo(String appLabel, String appPackageName, Drawable appIcon, boolean appSelected) {
+        mAppLabel = appLabel;
+        mAppPackageName = appPackageName;
+        mAppIcon = appIcon;
+        mAppSelected = appSelected;
+    }
+
+    public String getAppLabel() {
+        return mAppLabel;
+    }
+
+    public AppInfo setAppLabel(String appLabel) {
+        mAppLabel = appLabel;
+        return this;
+    }
+
+    public String getAppPackageName() {
+        return mAppPackageName;
+    }
+
+    public AppInfo setAppPackageName(String appPackageName) {
+        mAppPackageName = appPackageName;
+        return this;
+    }
+
+    public Drawable getAppIcon() {
+        return mAppIcon;
+    }
+
+    public AppInfo setAppIcon(Drawable appIcon) {
+        mAppIcon = appIcon;
+        return this;
+    }
+
+    public boolean isAppSelected() {
+        return mAppSelected;
+    }
+
+    public AppInfo setAppSelected(boolean appSelected) {
+        mAppSelected = appSelected;
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return "AppInfo{" +
+                "mAppLabel='" + mAppLabel + '\'' +
+                ", mAppPackageName='" + mAppPackageName + '\'' +
+                ", mAppSelected=" + mAppSelected +
+                '}';
+    }
+}
