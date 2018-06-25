@@ -2,13 +2,17 @@ package com.libok.androiddeveloper.model;
 
 import android.graphics.drawable.Drawable;
 
+import java.io.Serializable;
+
 /**
  * @author liboK
  * @date 2018/6/25 0025 3:10
  * @e-mail libolf@outlook.com
  * @description APP信息类
  */
-public class AppInfo {
+public class AppInfo implements Serializable{
+
+    private static final long serialVersionUID = -3577602297393471988L;
     private String mAppLabel;
     private String mAppPackageName;
     private Drawable mAppIcon;
@@ -59,6 +63,14 @@ public class AppInfo {
         mAppSelected = appSelected;
         return this;
     }
+
+//    @Override
+//    public String toString() {
+//        return "AppInfo{" +
+//                "mAppLabel='" + mAppLabel + '\'' +
+//                ", mAppPackageName='" + mAppPackageName + '\'' +
+//                '}';
+//    }
 
     @Override
     public String toString() {

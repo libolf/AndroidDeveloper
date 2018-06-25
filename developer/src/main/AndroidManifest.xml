@@ -33,7 +33,10 @@
         <service
             android:name=".service.TestService"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true" />
+
+        <activity android:name=".activity.StatusBarActivity"
+            android:theme="@style/NoWindowTitle"/>
     </application>
 
 </manifest>
