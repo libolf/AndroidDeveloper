@@ -8,12 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/test"
         android:scaleType="centerCrop"/>
 
     <include layout="@layout/toolbar_layout" />
-
+-->
 </RelativeLayout>

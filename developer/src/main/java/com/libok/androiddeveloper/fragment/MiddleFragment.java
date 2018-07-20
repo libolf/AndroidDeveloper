@@ -1,6 +1,5 @@
 package com.libok.androiddeveloper.fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,19 +8,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.libok.androiddeveloper.R;
+import com.libok.androiddeveloper.util.StatusBarUtil;
+
 /**
  * @author liboK
- * @date 2018/6/25 0025 3:08
+ * @date 2018/6/26 0026 10:31
  * @e-mail libolf@outlook.com
- * @description 测试Fragment
+ * @description
  */
-public class TestFragment extends Fragment {
+public class MiddleFragment extends Fragment {
 
-    public static TestFragment newInstance() {
+    private static final String TAG = "MiddleFragment";
+    private View mRootView;
+
+    public static MiddleFragment newInstance() {
 
         Bundle args = new Bundle();
 
-        TestFragment fragment = new TestFragment();
+        MiddleFragment fragment = new MiddleFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -34,21 +39,8 @@ public class TestFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
+        mRootView = inflater.inflate(R.layout.fragment_middle, null);
+//        StatusBarUtil.immerseStatusBar(getActivity());
+        return mRootView;
     }
 }

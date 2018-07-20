@@ -16,4 +16,16 @@
         android:layout_height="wrap_content"
         android:text="@string/main_button_animation"/>
 
+    <Button
+        android:id="@+id/main_button_gif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GIF"/>
+
+    <Button
+        android:id="@+id/main_button_mvp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MVP"/>
+
 </LinearLayout>

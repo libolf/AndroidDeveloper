@@ -6,7 +6,7 @@ android {
         applicationId "com.libok.androiddeveloper"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 4
+        versionCode 10
         versionName "4.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -31,4 +31,6 @@ dependencies {
     implementation 'mi-appstore:xiaomi-update-sdk:4.0.3'
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    api 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
 }

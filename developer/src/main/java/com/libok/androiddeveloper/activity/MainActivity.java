@@ -3,22 +3,20 @@ package com.libok.androiddeveloper.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.libok.androiddeveloper.R;
 import com.libok.androiddeveloper.model.AppInfo;
 import com.libok.androiddeveloper.util.L;
+import com.xiaomi.market.sdk.XiaomiUpdateAgent;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.OutputStream;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
     Button mMainButtonStatusbar;
     @BindView(R.id.main_button_animation)
     Button mMainButtonAnimation;
+    @BindView(R.id.main_button_gif)
+    Button mMainButtonGif;
+    @BindView(R.id.main_button_mvp)
+    Button mMainButtonMvp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 //        File file = new File(getFilesDir().getAbsolutePath() + File.separator + "object_save.txt");
 //        readObject(file);
 //        writeObject(file);
+        XiaomiUpdateAgent.update(this, true);
+        XiaomiUpdateAgent.setUpdateAutoPopup(true);
     }
 
     private void writeObject(File file) {
@@ -101,14 +105,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({R.id.main_button_statusbar, R.id.main_button_animation})
+    @OnClick({R.id.main_button_statusbar,
+            R.id.main_button_animation,
+            R.id.main_button_gif,
+            R.id.main_button_mvp})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.main_button_statusbar:
                 startActivity(new Intent(this, StatusBarActivity.class));
                 break;
             case R.id.main_button_animation:
+                startActivity(new Intent(this, AnimationActivity.class));
                 break;
+            case R.id.main_button_gif:
+                startActivity(new Intent(this, GifActivity.class));
+            case R.id.main_button_mvp:
+                startActivity(new Intent(this, MVPActivity.class));
         }
     }
 }
